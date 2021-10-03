@@ -7,6 +7,10 @@ int main() {
 	int a, b;
 	cin >> a >> b;
 	setlocale(LC_ALL, "Rus");
+	if (b < 1 || b>12 || a < 1 || a>31 || (b == 2 && a > 28) || ((b == 4 || b == 6 || b == 9 || b == 11) && a > 30)) {
+         cout « "Ошибка";
+         }
+        else {
 	switch (a) {
 	case 1:
 		cout << 365 - (31 - (31 - b)) << endl;break;
@@ -31,14 +35,19 @@ int main() {
 	case 11:
 		cout << 365 - (28 + (6 * 31) + (4 * 30) - (30 - b)) << endl; break;
 	case 2:
-		if (b < 29) {
+		if (b <= 28 && b>0)  {
 			cout << 365 - (28 + 31 - (28 - b)) << endl; break;
+		        }
+	        else if (b==29) {
+			cout<<366-(29+31)<<endl;
+				break;
 		}
 		else {
 			cout << "Ошибка" << endl; break;
 		}
 	default:
 		cout << "Ошибка" << endl; break;
+	}
 	}
 
 	return 0;
