@@ -1,14 +1,18 @@
-/*Напишите функцию, которая моделирует бросание двух игральных
-кубиков(на каждом может выпасть от 1 до 6 очков).
-(Используйте генератор псевдослучайных чисел.)*/
+
 #include<iostream>
 using namespace std;
+int random1(int N) {
+    return rand() % N;
+}
+int random2(int M) {
+    return rand() % M;
+}
 int main() {
     setlocale(LC_ALL, "Rus");
+    srand(time(0));
     int n, m;
-    srand(time(NULL));
-    n = 1 + rand() % 6;
-    m = 1 + rand() % 6;
+        n = rand() % 6 + 1;
+        m = rand() % 6 + 1;
     cout << "Первый кубик = " << n << endl;
     cout << "Второй кубик = " << m << endl;
     return 0;
