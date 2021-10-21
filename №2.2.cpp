@@ -1,15 +1,19 @@
-//Íàïèøèòå ôóíêöèþ, êîòîðàÿ âû÷èñëÿåò N-îå ÷èñëî Ôèáîíà÷÷è
+
 #include<iostream>
 using namespace std;
+void F(int &N) {
+    int a = 1, b = 1;
+    for (int i = 2;i <= N;i++) {
+        int c;
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    cout << "N = " << a;
+}
 int main() {
-	int N, i;
-	cin >> N;
-	int a = 1, b = 1;
-	for (i = 2;i <= N;i++) {
-		int c = a + b;
-		a = b;
-		b = c;
-	}
-	cout << "N" << " = " << a << endl;
-	return 0;
+    int N;
+    cin >> N;
+    F(N);
+   return 0;
 }
