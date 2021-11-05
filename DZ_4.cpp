@@ -1,4 +1,4 @@
-
+//1
 #include<iostream>
 using namespace std;
 void print_array(int a[], const int size) {
@@ -17,6 +17,8 @@ void ap(int a[], const int size) {
 }
 
 
+
+//2
 int random_n(int N2) {
 	return rand() % N2 + 1;
 }
@@ -36,7 +38,7 @@ void print_mas2(int a[], int size) {
 }
 
 
-
+//3
 void print_mas3(int mas[], int size) {
 	for (int i = 0;i < size - 1;i++) {
 		cout << mas[i] << " ";
