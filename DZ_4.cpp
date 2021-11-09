@@ -1,4 +1,4 @@
-//1
+
 #include<iostream>
 using namespace std;
 void print_array(int a[], const int size) {
@@ -17,8 +17,6 @@ void ap(int a[], const int size) {
 }
 
 
-
-//2
 int random_n(int N2) {
 	return rand() % N2 + 1;
 }
@@ -30,20 +28,7 @@ void random_mas2(int a[], int size) {
 		a[i] = random_n(N2);
 	}
 }
-void print_mas2(int a[], int size) {
-	for (int i = 0;i < size - 1;i++) {
-		cout << a[i] << " ";
-	}
-	cout << endl;
-}
 
-
-//3
-void print_mas3(int mas[], int size) {
-	for (int i = 0;i < size - 1;i++) {
-		cout << mas[i] << " ";
-	}
-}
 
 void random_mas3(int mas[], int size) {
 	for (int i = 0;i < size;i++) {
@@ -70,15 +55,14 @@ int main() {
 	int A2[N2];
 	random_n(N2);
 	random_mas2(A2, N2);
-	print_mas2(A2, N2);
-
-
+	print_array(A2, N2);
 	srand(time(NULL));
+
 	int const N3 = 15;
 	int mas[N3];
 	random_mas3(mas, N3);
 	kol(mas, N3);
-	print_mas3(mas, N3);
+	print_array(mas, N3);
 	cout << endl;
 	return 0;
 }
