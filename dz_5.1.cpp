@@ -1,5 +1,4 @@
-/*Ввести символьную строку и проверить, является ли она палиндромом
-(палиндром читается одинаково в обоих направлениях, например, «казак»)*/
+
 #include<iostream>
 #include<string.h>
 #include<stdio.h>
@@ -23,10 +22,10 @@ int main() {
     char str[256];
     cin.getline(str, 256);
     if (get_polyndrom(str)) {
-        cout << "Палиндром" << endl;
+        cout << "РџРѕР»РёРЅРґСЂРѕРј" << endl;
     }
     else {
-        cout << "Не палиндром" << endl;
+        cout << "РќРµ РїРѕР»РёРЅРґСЂРѕРј" << endl;
     }
     return 0;
 }
