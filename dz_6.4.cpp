@@ -1,5 +1,4 @@
-/*В квадратной таблице обменяйте местами элементы строки и столбца,
-на пересечении которых находится минимальный из положительных элементов*/
+
 #include<iostream>
 using namespace std;
 void print_array(int** array, int s) {
@@ -40,7 +39,7 @@ void change_array(int** array, int s) {
 		}
 
 	}
-	cout << "Матрица после преобразований" << endl;
+	cout << "РњР°С‚СЂРёС†Р° РїРѕСЃР»Рµ РїСЂРµР±СЂР°Р·РѕРІР°РЅРёР№" << endl;
 	for (int i = 0;i < s;i++) {
 		for (int j = 0;j < s;j++) {
 			cout << array[i][j] << '\t';
@@ -60,7 +59,7 @@ int main() {
 		array[i] = new int[s];
 	}
 	random_array(array, s);
-	cout << "Исходная матрица" << endl;
+	cout << "РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°" << endl;
 	print_array(array, s);
 	change_array(array, s);
 	return 0;
