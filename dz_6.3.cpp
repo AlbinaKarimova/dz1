@@ -33,6 +33,10 @@ void change_array(int** array, int s) {
     }
 
 }
+void free(int** array, int s) {
+	delete[] array[0];
+	delete[] array;
+}
 
 int main() {
     setlocale(LC_ALL, "Rus");
@@ -49,5 +53,6 @@ int main() {
     change_array(array, s);
     cout << "Матрица симметричная относительно побочной диагонали" << endl;
     print_array(array, s);
+    free(array,s);
     return 0;
 }
