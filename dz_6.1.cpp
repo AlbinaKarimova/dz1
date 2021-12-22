@@ -38,6 +38,7 @@ void change_array(int** array, int s) {
 		}
 	}
 	s--;
+	cout<<"Матрица после удаления строки и столбца"<<endl;
 	for (int i = 0;i < s;i++) {
 		for (int j = 0;j < s;j++) {
 			cout << array[i][j] << '\t';
@@ -48,6 +49,7 @@ void change_array(int** array, int s) {
 }
 
 int main() {
+	setlocale(LC_ALL,"Rus");
 	srand(time(NULL));
 	int s;
 	cin >> s;
@@ -56,6 +58,7 @@ int main() {
 		array[i] = new int[s];
 	}
 	random_array(array, s);
+	cout<<"Исходная матрица"<<endl;
 	print_array(array, s);
 	change_array(array, s);
 	return 0;
