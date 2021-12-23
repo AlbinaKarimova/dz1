@@ -33,8 +33,11 @@ void change_array(int** array, int s) {
     }
 
 }
-void free(int** array, int s) {
-	delete[] array[0];
+
+void delete_array(int** array, int s) {
+     for(int i=0;i<s;i++){
+	delete[] array[i];
+     }
 	delete[] array;
 }
 
@@ -53,6 +56,6 @@ int main() {
     change_array(array, s);
     cout << "Матрица симметричная относительно побочной диагонали" << endl;
     print_array(array, s);
-    free(array,s);
+    delete_array(array,s);
     return 0;
 }
