@@ -1,4 +1,3 @@
-
 #include<iostream>
 using namespace std;
 void print_array(int** array, int s) {
@@ -39,14 +38,13 @@ void change_array(int** array, int s) {
 		}
 
 	}
-	cout << "Матрица после пребразований" << endl;
-	for (int i = 0;i < s;i++) {
-		for (int j = 0;j < s;j++) {
-			cout << array[i][j] << '\t';
-		}
-		cout << endl;
-	}
-	cout << endl;
+}
+
+void delete_array(int **array,int s){
+    for(int i=0;i<s;i++){
+        delete [] array[i];
+    }
+    delete [] array;
 }
 
 int main() {
@@ -62,5 +60,8 @@ int main() {
 	cout << "Исходная матрица" << endl;
 	print_array(array, s);
 	change_array(array, s);
+	cout << "Матрица после пребразований" << endl;
+	print_array(array,s);
+	delete_array(array,s);
 	return 0;
 }
