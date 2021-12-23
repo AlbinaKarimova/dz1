@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 void random_array(int** array, int s) {
     for (int i = 0;i < s;i++) {
@@ -32,6 +31,13 @@ void print_array(int** array, int s) {
         cout << endl;
     }
     cout << endl;
+}
+
+void delete_array(int **array,int s){
+    for(int i=0;i<s;i++){
+        delete [] array[i];
+    }
+    delete [] array;
 }
 
 int main()
@@ -70,5 +76,8 @@ int main()
     cout << endl;
 
     print_array(array3, s);
+    delete_array(array1,s);
+    delete_array(array2,s);
+    delete_array(array3,s);
     return 0;
 }
