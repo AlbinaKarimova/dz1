@@ -72,12 +72,12 @@ void check_stack(elem*& top, string& s) {
             else break;
         }
     }
-    if (peek(top) == nullptr) cout << "Âûðàæåíèå âåðíîå!";
-    else cout << "Â âûðàæåíèå åñòü îøèáêà!";
+    if (peek(top) == nullptr) cout << "Ð’Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ Ð²ÐµÑ€Ð½Ð¾!";
+    else cout << "Ð’ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¸ ÐµÑÑ‚ÑŒ Ð¾ÑˆÐ¸Ð±ÐºÐ°!";
 }
 
 void show_stack(elem* top) {
-    if (!top) cout << "Ñòåê ïóñò!" << endl;
+    if (!top) cout << "Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚!" << endl;
     else {
         auto* curr = top;
         while (curr) {
@@ -93,14 +93,14 @@ void main() {
     elem* stack = nullptr;
     string s1 ="([{<}>])";
     string s2 = "([{<>}])";
-    cout << "Âûðàæåíèå 1:" << s1 << endl;
+    cout << "Ð’Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ 1:" << s1 << endl;
     check_stack(stack, s1);
-    cout <<'\n' << "Òåêóùèé ñòåê: " << endl;
+    cout <<'\n' << "Ð¢ÐµÐºÑƒÑ‰Ð¸Ð¹ ÑÑ‚ÐµÐº: " << endl;
     show_stack(stack);
     clear(stack);
     cout << endl;
-    cout << "Âûðàæåíèå 2:" << s2 << endl;
+    cout << "Ð’Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ 2:" << s2 << endl;
     check_stack(stack, s2);
-    cout <<'\n' << "Òåêóùèé ñòåê: " << endl;
+    cout <<'\n' << "Ð¢ÐµÐºÑƒÑ‰Ð¸Ð¹ ÑÑ‚ÐµÐº: " << endl;
     show_stack(stack);
 }
