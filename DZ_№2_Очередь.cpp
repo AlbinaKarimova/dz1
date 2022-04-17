@@ -81,10 +81,10 @@ void load_data(const char* filename, queue& kredit, queue& vklad) {
 			int salary;
 			sscanf_s(man, "%49[^0-9] %d %49[^0-9] %d %49[^0-9]", name, 50,&age,work,50,&salary, goal, 50);
 			int l = strlen(goal);
-			if (goal[l - 1] == 'ä') {
+			if (goal[l - 1] == 'Ð´') {
 				enqueue(vklad, name,age,work,salary,goal);
 			}
-			else if (goal[l - 1] == 'ò') {
+			else if (goal[l - 1] == 'Ñ‚') {
 				enqueue(kredit, name,age,work,salary,goal);
 			}
 		}
@@ -97,7 +97,7 @@ void show_data(queue& q) {
 	while (q.length > 0) {
 		man m;
 		if (dequeue(q, m)) {
-			cout << ++i << ")" << m.name <<" Âîçðàñò:" << m.age <<" Ìåñòî ðàáîòû:"<<m.work<< " Äîõîä:"<<m.salary << " Öåëü : " << m.goal;
+			cout << ++i << ")" << m.name <<" Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚:" << m.age <<" ÐœÐµÑÑ‚Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹:"<<m.work<< " Ð”Ð¾Ñ…Ð¾Ð´:"<<m.salary << " Ð¦ÐµÐ»ÑŒ : " << m.goal;
 			cout << endl;
 		}
 	}
@@ -108,11 +108,11 @@ void main() {
 	queue kredit;
 	queue vklad;
 	load_data("data.txt", kredit, vklad);
-	cout << "Ëþäè, âçÿâøèå êðåäèò:";
+	cout << "Ð›ÑŽÐ´Ð¸, Ð²Ð·ÑÐ²ÑˆÐ¸Ðµ ÐºÑ€ÐµÐ´Ð¸Ñ‚:";
 	cout << endl;
 	show_data(kredit);
 	cout << endl;
-	cout << "Ëèöà, âçÿâøèå âêëàä:";
+	cout << "Ð›Ð¸Ñ†Ð°, Ð²Ð·ÑÐ²ÑˆÐ¸Ðµ Ð²ÐºÐ»Ð°Ð´:";
 	cout << endl;
 	show_data(vklad);
 }
