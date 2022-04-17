@@ -2,10 +2,10 @@
 #include<fstream>
 using namespace std;
 void show_footer() {
-	cout << "&copy; Àëüáèíà Êàðèìîâà";
+	cout << "&copy; ÐÐ»ÑŒÐ±Ð¸Ð½Ð° ÐšÐ°Ñ€Ð¸Ð¼Ð¾Ð²Ð°";
 }
 void show_header() {
-	cout << "Çàäàíèå ¹2: Î÷åðåäü";
+	cout << "Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–2: ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ";
 }
 void show_content() {
 	cout << "<p>#include &#60iostream&#62;</p>";
@@ -83,10 +83,10 @@ void show_content() {
 	cout << "<p>int salary;</p>";
 	cout << "sscanf_s(man, \"%49[^0-9] %d %49[^0-9] %d %49[^0-9]\", name, 50,&age,work,50,&salary, goal, 50);";
 	cout << "<p>int l = strlen(goal);</p>";
-	cout << "if (goal[l - 1] == 'ä') {";
+	cout << "if (goal[l - 1] == 'Ð´') {";
 	cout << "<p>enqueue(vklad, name,age,work,salary,goal);</p>";
 	cout << "}";
-	cout << "<p>else if (goal[l - 1] == 'ò') {</p>";
+	cout << "<p>else if (goal[l - 1] == 'Ñ‚') {</p>";
 	cout << "enqueue(kredit, name,age,work,salary,goal);";
 	cout << "<p>}</p>";
 	cout << "}";
@@ -98,7 +98,7 @@ void show_content() {
 	 cout << "while (q.length > 0) {";
 	 cout << "<p>man m;</p>";
 	cout << "if (dequeue(q, m)) {";
-	cout << "<p>cout << ++i << \")\" << m.name <<\" Âîçðàñò: \" << m.age <<\" Ìåñòî ðàáîòû : \"<< m.work<<\" Äîõîä : \"<< m.salary << \" Öåëü : \" << m.goal;</p>";
+	cout << "<p>cout << ++i << \")\" << m.name <<\" Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: \" << m.age <<\" ÐœÐµÑÑ‚Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ : \"<< m.work<<\" Ð”Ð¾Ñ…Ð¾Ð´ : \"<< m.salary << \" Ð¦ÐµÐ»ÑŒ : \" << m.goal;</p>";
 	cout << "<p>cout<< endl ;</p>";
 	cout << "}";
 	cout << "<p>}</p>";
@@ -108,11 +108,11 @@ void show_content() {
 	cout << "<p>queue kredit;</p>";
 	cout << "queue vklad;";
 	cout << "<p>load_data(\"data.txt\", kredit, vklad);</p>";
-	cout << "cout << \"Ëþäè, âçÿâøèå êðåäèò : \n\";";
+	cout << "cout << \"Ð›ÑŽÐ´Ð¸, Ð²Ð·ÑÐ²ÑˆÐ¸Ðµ ÐºÑ€ÐµÐ´Ð¸Ñ‚ :\";";
 	cout << "<p>cout<< endl; </p>";
 	cout << "show_data(kredit);";
 	cout << "<p>cout<< endl; </p>";
-	cout << "cout << \"Ëèöà, âçÿâøèå âêëàä : \n\";";
+	cout << "cout << \"Ð›ÑŽÐ´Ð¸, Ð²Ð·ÑÐ²ÑˆÐ¸Ðµ Ð²ÐºÐ»Ð°Ð´ :\";";
 	cout << "<p>cout<< endl; </p>";
 	cout << "show_data(vklad);";
 	cout << "<p>}</p>";
@@ -160,6 +160,6 @@ void main() {
 		f.close();
 	}
 	else {
-		cout << "Íå óäàëîñü âûâåñòè ñòðàíèöó";
+		cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ð°Ð¹Ð»";
 	}
 }
