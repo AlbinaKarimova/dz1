@@ -215,18 +215,18 @@ void get_param_value(char*& value, const char* param_name, const char* data)
 
 
 void show_footer() {
-	cout << "&copy; Àëüáèíà Êàðèìîâà";
+	cout << "&copy; ÐÐ»ÑŒÐ±Ð¸Ð½Ð° ÐšÐ°Ñ€Ð¸Ð¼Ð¾Ð²Ð°";
 }
 void show_header() {
-	cout << "Çäàíèå ¹3: Ëèñò1";
+	cout << "Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–3: Ð¡Ð¿Ð¸ÑÐºÐ¸";
 }
 void show_content() {
 	setlocale(LC_ALL, "Rus");
 	elem* list = nullptr;
 	cout << "<form method='get' action='Third.cgi'>";
-	cout << "Ââåäèòå ðàçìåð ñïèñêà: <input type='text' name='size' maxlength='50' size='50'><br>";
-	cout << "Ââåäèòå ýëåìåíòû ñïèñêà ÷åðåç ïðîáåë: <input type='text' name='list' maxlength='50' size='50'><br>";
-	cout << "<input type='submit' value='Îòïðàâèòü'>";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: <input type='text' name='size' maxlength='50' size='50'><br>";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÐ¿Ð¸ÑÐºÐ° Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»: <input type='text' name='list' maxlength='50' size='50'><br>";
+	cout << "<input type='submit' value='ÐžÑ‚Ð¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ'>";
 	cout << "</form>";
 
 	char* data = nullptr;
@@ -300,6 +300,6 @@ void main() {
 		f.close();
 	}
 	else {
-		cout << "Íå óäàëîñü âûâåñòè ñòðàíèöó";
+		cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñƒ";
 	}
 }
